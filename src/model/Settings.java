@@ -1,11 +1,20 @@
 package model;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Settings {
     private int width;
     private int height;
-    private int number;
-    private int date;
-    private int fio;
+    List<Column> columns;
+
+    public List<Column> getColumns() {
+        return columns;
+    }
+
+    public void setColumns(List<Column> columns) {
+        this.columns = columns;
+    }
 
     public int getWidth() {
         return width;
@@ -23,27 +32,12 @@ public class Settings {
         this.height = height;
     }
 
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public int getDate() {
-        return date;
-    }
-
-    public void setDate(int date) {
-        this.date = date;
-    }
-
-    public int getFio() {
-        return fio;
-    }
-
-    public void setFio(int fio) {
-        this.fio = fio;
+    @Override
+    public String toString() {
+        return "Settings{" +
+                "width=" + width +
+                ", height=" + height +
+                ", columns=" + columns.toString() +
+                '}';
     }
 }
