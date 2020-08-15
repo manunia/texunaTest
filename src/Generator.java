@@ -70,7 +70,7 @@ public class Generator {
     }
 
     private static void printPageSeparator(PrintStream fileOut) {
-        fileOut.println(System.lineSeparator() + "~" + System.lineSeparator());
+        fileOut.println(System.lineSeparator() + "~");
         currentLine = 0;
         currentPage++;
     }
@@ -129,12 +129,11 @@ public class Generator {
     }
 
     private static void printDottedLineSeparator() {
-        fileOut.println();
+        fileOut.print(System.lineSeparator());
         for (int i = 0; i < settings.getWidth(); i++) {
             fileOut.print("-");
         }
     }
-
 
     private static int getCutIndex(String data, int width) {
         if (data.length() <= width) {
